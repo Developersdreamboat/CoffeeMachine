@@ -9,14 +9,14 @@ namespace Coffee
     public class UnitOfWork:IUnitOfWork
     {
         private readonly CoffeeContext context;
-        private IAutomatRepository automatRepository;
+        private IRepository<AutomatEntity> automatRepository;
 
         public UnitOfWork(CoffeeContext context)
         {
             this.context = context;
         }
 
-        public IAutomatRepository AutomatRepository
+        public IRepository<AutomatEntity> AutomatRepository
         {
             get
             {

@@ -8,7 +8,7 @@ namespace Coffee
 {
     public interface IUnitOfWork
     {
-        IAutomatRepository AutomatRepository { get; }
+        IRepository<AutomatEntity> AutomatRepository { get; }
         void SaveChanges();
     }
 }
