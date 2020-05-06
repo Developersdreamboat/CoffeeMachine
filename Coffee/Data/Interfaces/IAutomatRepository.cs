@@ -8,6 +8,5 @@ namespace Coffee
 {
     public interface IAutomatRepository:IRepository<AutomatEntity>
     {
-        new IEnumerable<AutomatEntity> GetAll();
     }
 }
