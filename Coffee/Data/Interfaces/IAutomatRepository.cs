@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Coffee
 {
-    public interface IUnitOfWork
+    public interface IAutomatRepository:IRepository<AutomatEntity>
     {
-        IAutomatRepository AutomatRepository { get; }
-        void SaveChanges();
     }
 }

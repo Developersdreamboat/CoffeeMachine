@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 namespace Coffee
 {
-    public class AutomatRepository:IRepository<AutomatEntity>
+    public class AutomatRepository:IAutomatRepository
     {
         private CoffeeContext context;
 

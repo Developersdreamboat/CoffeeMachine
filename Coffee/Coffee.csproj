@@ -190,6 +190,7 @@
     <Compile Include="Data\Entities\IngredientEntity.cs" />
     <Compile Include="Business\Services\AutomatService.cs" />
     <Compile Include="Data\CoffeeContext.cs" />
+    <Compile Include="Data\Interfaces\IAutomatRepository.cs" />
     <Compile Include="Data\Interfaces\IRepository.cs" />
     <Compile Include="Data\Interfaces\IUnitOfWork.cs" />
     <Compile Include="Data\Repositories\AutomatRepository.cs" />
