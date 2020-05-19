@@ -7,35 +7,13 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 namespace Coffee
 {
-    public class AutomatRepository:IAutomatRepository
+    public class AutomatRepository:Repository<AutomatEntity>, IAutomatRepository
     {
-        private CoffeeContext context;
-
+        CoffeeContext context;
         public AutomatRepository(CoffeeContext context)
+                : base(context)
         {
             this.context = context;
-        }
-
-        public void Create(AutomatEntity entity)
-        {
-            context.Automats.Add(entity);
-        }
-
-        public void Delete(AutomatEntity entity)
-        {
-            context.Automats.Remove(entity);
-        }
-
-        public void Edit(AutomatEntity entity)
-        {
-            context.Entry(entity).State = EntityState.Modified;
-            context.SaveChanges();
-        }
-
-
-        public IEnumerable<AutomatEntity> GetAll()
-        {
-            return context.Automats.ToList();
         }
     }
 }

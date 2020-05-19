@@ -194,6 +194,7 @@
     <Compile Include="Data\Interfaces\IRepository.cs" />
     <Compile Include="Data\Interfaces\IUnitOfWork.cs" />
     <Compile Include="Data\Repositories\AutomatRepository.cs" />
+    <Compile Include="Data\Repositories\Repository.cs" />
     <Compile Include="Data\UnitOfWork.cs" />
     <Compile Include="Migrations\202004291830160_InitialCreate.cs" />
     <Compile Include="Migrations\202004291830160_InitialCreate.designer.cs">
