@@ -30,8 +30,9 @@ namespace Coffee
             IAutomatIngredientService automatIngredientService = new AutomatIngredientService(unitOfWork,mapper);
             IAutomatService automatService = new AutomatService(unitOfWork, mapper, orderService, 
                 drinkService, drinkIngredientService, automatIngredientService);
+            IIngredientService ingredientService = new IngredientService(unitOfWork, mapper);
 
-            return new MainWindowViewModel(automatService);
+            return new MainWindowViewModel(automatService,ingredientService);
         }
     }
 }

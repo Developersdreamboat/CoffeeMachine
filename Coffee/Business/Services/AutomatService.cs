@@ -46,17 +46,16 @@ namespace Coffee
             return usedChoosenIngredient;
         }
 
-        public int CountRefillPeriod(int automatId, int ingredientId, DateTime first, DateTime second)
+        public int CountRefillPeriod(int ingredientId, int automatId, DateTime first, DateTime second)
         {
-            int refillPeriod;
             AutomatIngredientModel automatsIngredients = automatIngredientService.GetAutomatIngredients().
                 Where(a => a.AutomatId == automatId).First();
-            int automatMaxIngredients = automatsIngredients.MaxIngredients;
-            int usedChoosenIngredient = GetIngredientsUsing(automatId, ingredientId, first, second);
-            double hoursChoosen = (second - first).TotalHours;
-            int refillSpeed = usedChoosenIngredient / (int)hoursChoosen;
-            refillPeriod = automatMaxIngredients/refillSpeed;
-            return refillPeriod;
+            var automatMaxIngredients = automatsIngredients.MaxIngredients;
+            var usedChoosenIngredient = GetIngredientsUsing(ingredientId,automatId, first, second);
+            var daysChoosen = (second - first).TotalDays;
+            var refillSpeed = usedChoosenIngredient / daysChoosen;
+            var refillPeriod = automatMaxIngredients/refillSpeed;
+            return (int)refillPeriod;
         }
     }
 }

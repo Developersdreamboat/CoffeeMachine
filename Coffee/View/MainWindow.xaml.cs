@@ -56,20 +56,20 @@ namespace Coffee
             //        AutomatId = 1,
             //        DrinkId = 1,
             //        OrderTime = new DateTime(2018, 7, 20, 18, 30, 25)
-            //};
-            //    AutomatOrderEntity automatOrder2 = new AutomatOrderEntity() 
+            //    };
+            //    AutomatOrderEntity automatOrder2 = new AutomatOrderEntity()
             //    {
             //        Id = 2,
             //        AutomatId = 1,
             //        DrinkId = 2,
             //        OrderTime = new DateTime(2018, 7, 20, 13, 25, 15)
-            //};
+            //    };
             //    DrinkEntity drinkEntity1 = new DrinkEntity()
             //    {
             //        Id = 1,
             //        IdAutomat = 1
             //    };
-            //    DrinkEntity drinkEntity2 = new DrinkEntity() 
+            //    DrinkEntity drinkEntity2 = new DrinkEntity()
             //    {
             //        Id = 2,
             //        IdAutomat = 1
@@ -118,15 +118,18 @@ namespace Coffee
             //    };
             //    IngredientEntity ingredient1 = new IngredientEntity()
             //    {
-            //        Id = 1
+            //        Id = 1,
+            //        Name = "Milk"
             //    };
             //    IngredientEntity ingredient2 = new IngredientEntity()
             //    {
-            //        Id = 2
+            //        Id = 2,
+            //        Name = "Water"
             //    };
             //    IngredientEntity ingredient3 = new IngredientEntity()
             //    {
-            //        Id = 3
+            //        Id = 3,
+            //        Name = "Coffee"
             //    };
             //    context.Automats.Add(automat1);
             //    context.AutomatIngredients.Add(automatIngredient1);

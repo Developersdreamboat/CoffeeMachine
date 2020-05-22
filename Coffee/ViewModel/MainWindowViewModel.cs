@@ -13,9 +13,9 @@ namespace Coffee
     {
             public AutomatViewModel AutomatViewModel { get; set; }
 
-            public MainWindowViewModel(IAutomatService automatService)
+            public MainWindowViewModel(IAutomatService automatService,IIngredientService ingredientService)
             {
-                AutomatViewModel = new AutomatViewModel(automatService); 
+                AutomatViewModel = new AutomatViewModel(automatService, ingredientService); 
             }
         
       

@@ -185,11 +185,13 @@
     <Compile Include="Business\Interfaces\IAutomatService.cs" />
     <Compile Include="Business\Interfaces\IDrinkIngredientService.cs" />
     <Compile Include="Business\Interfaces\IDrinkService.cs" />
+    <Compile Include="Business\Interfaces\IIngredientService.cs" />
     <Compile Include="Business\Interfaces\IOrderService.cs" />
     <Compile Include="Business\MapperConfigurationClass.cs" />
     <Compile Include="Business\Services\AutomatIngredientService.cs" />
     <Compile Include="Business\Services\DrinkIngredientService.cs" />
     <Compile Include="Business\Services\DrinkService.cs" />
+    <Compile Include="Business\Services\IngredientService.cs" />
     <Compile Include="Business\Services\OrderService.cs" />
     <Compile Include="Configuration\Interfaces\ICreator.cs" />
     <Compile Include="Configuration\ViewModelCreator.cs" />
