@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Coffee
 {
-    public class AutomatModel
-    {;
+    public class AutomatOrderModel
+    {
         public int Id { get; set; }
+        public int AutomatId { get; set; }
+        public int DrinkId { get; set; }
+        public DateTime OrderTime { get; set; }
     }
 }

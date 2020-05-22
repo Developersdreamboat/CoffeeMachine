@@ -8,14 +8,7 @@ namespace Coffee
 {
     public class DrinkEntity
     {
-        [Key]
-        public string Name { get; set; }
-        public readonly IngredientEntity Composition;
-
-        public DrinkEntity(string name, IngredientEntity composition)
-        {
-            Name = name;
-            Composition = composition;
-        }
+        public int Id { get; set; }
+        public int IdAutomat { get; set; }
     }
 }

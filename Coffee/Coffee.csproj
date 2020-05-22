@@ -186,22 +186,33 @@
     <Compile Include="Configuration\Interfaces\ICreator.cs" />
     <Compile Include="Configuration\ViewModelCreator.cs" />
     <Compile Include="Data\Entities\AutomatEntity.cs" />
+    <Compile Include="Data\Entities\AutomatIngredientEntity.cs" />
+    <Compile Include="Data\Entities\AutomatOrderEntity.cs" />
     <Compile Include="Data\Entities\DrinkEntity.cs" />
+    <Compile Include="Data\Entities\DrinkIngredientEntity.cs" />
     <Compile Include="Data\Entities\IngredientEntity.cs" />
     <Compile Include="Business\Services\AutomatService.cs" />
     <Compile Include="Data\CoffeeContext.cs" />
+    <Compile Include="Data\Interfaces\IAutomatIngredientRepository.cs" />
+    <Compile Include="Data\Interfaces\IAutomatOrderRepository.cs" />
     <Compile Include="Data\Interfaces\IAutomatRepository.cs" />
+    <Compile Include="Data\Interfaces\IDrinkIngredientRepository.cs" />
+    <Compile Include="Data\Interfaces\IDrinkRepository.cs" />
+    <Compile Include="Data\Interfaces\IIngredientRepository.cs" />
     <Compile Include="Data\Interfaces\IRepository.cs" />
     <Compile Include="Data\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Data\Repositories\AutomatOrderRepository.cs" />
     <Compile Include="Data\Repositories\AutomatRepository.cs" />
+    <Compile Include="Data\Repositories\DrinkIngredientRepository.cs" />
+    <Compile Include="Data\Repositories\DrinkRepository.cs" />
+    <Compile Include="Data\Repositories\AutomatIngredientRepository.cs" />
+    <Compile Include="Data\Repositories\IngredientRepository.cs" />
     <Compile Include="Data\Repositories\Repository.cs" />
     <Compile Include="Data\UnitOfWork.cs" />
-    <Compile Include="Migrations\202004291830160_InitialCreate.cs" />
-    <Compile Include="Migrations\202004291830160_InitialCreate.designer.cs">
-      <DependentUpon>202004291830160_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\AutomatIngredientModel.cs" />
     <Compile Include="Model\AutomatModel.cs" />
+    <Compile Include="Model\AutomatOrderModel.cs" />
+    <Compile Include="Model\DrinkIngredientModel.cs" />
     <Compile Include="Model\DrinkModel.cs" />
     <Compile Include="Model\IngredientModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
@@ -226,9 +237,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202004291830160_InitialCreate.resx">
-      <DependentUpon>202004291830160_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

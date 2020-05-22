@@ -10,8 +10,8 @@ namespace Coffee
     public class CoffeeContext : DbContext
     {
         public DbSet<AutomatEntity> Automats { get; set; }
+        public DbSet<>
         public DbSet<IngredientEntity> Ingredients { get; set; }
-        public DbSet<DrinkEntity> Drinks { get; set; }
         public CoffeeContext() : base("name=CoffeeContext")
         {
 

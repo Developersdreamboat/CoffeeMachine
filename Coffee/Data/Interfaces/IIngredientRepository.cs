@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Coffee
-{
-    public class AutomatModel
-    {;
-        public int Id { get; set; }
+    public interface IIngredientRepository:IRepository<IngredientEntity>
+    {
     }
 }

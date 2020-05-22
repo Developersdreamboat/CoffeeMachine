@@ -8,14 +8,7 @@ namespace Coffee
 {
     public class DrinkModel
     {
-        public readonly IngredientModel Composition;
-
-        public DrinkModel(int id, IngredientModel composition)
-        {
-            this.id=id;
-            Composition = composition;
-        }
-
-        public int id { get; }
+        public int Id { get; set; }
+        public int IdAutomat { get; set; }
     }
 }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using System.Linq.Expressions;
+
 namespace Coffee
 {
-    public class AutomatRepository:Repository<AutomatEntity>, IAutomatRepository
+    public class DrinkRepository:Repository<DrinkEntity>,IDrinkRepository
     {
-        public AutomatRepository(DbContext context) : base(context)
+        public DrinkRepository(DbContext context) : base(context)
         {
         }
     }
