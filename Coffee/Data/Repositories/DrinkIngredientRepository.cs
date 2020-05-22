@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-namespace Coffee.Data.Repositories
+
+namespace Coffee
 {
     public class DrinkIngredientRepository:Repository<DrinkIngredientEntity>,IDrinkIngredientRepository
     {

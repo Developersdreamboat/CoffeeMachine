@@ -9,6 +9,11 @@ namespace Coffee
     public interface IUnitOfWork
     {
         IAutomatRepository AutomatRepository { get; }
+        IDrinkRepository DrinkRepository { get; } 
+        IIngredientRepository IngredientRepository { get; }
+        IAutomatIngredientRepository AutomatIngredientRepository { get; }
+        IAutomatOrderRepository AutomatOrderRepository { get; }
+        IDrinkIngredientRepository DrinkIngredientRepository { get; }
         void SaveChanges();
     }
 }
