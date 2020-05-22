@@ -17,7 +17,7 @@ namespace Coffee
         public DbSet<DrinkIngredientEntity> DrinkIngredients { get; set; }
         public CoffeeContext() : base("name=CoffeeContext")
         {
-
+            Database.CreateIfNotExists();
         }
 
     }

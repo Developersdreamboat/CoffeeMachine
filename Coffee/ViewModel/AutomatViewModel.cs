@@ -68,10 +68,10 @@ namespace Coffee
                 return calculateIngredients ??
                     (calculateIngredients = new RelayCommand(obj =>
                     {
-                        IngredientModel usd = automatService.GetIngredientsUsing(selectedAutomat);
-                        Milk = usd.Milk;
-                        Water = usd.Water;
-                        Coffee = usd.Coffee;
+                        //IngredientModel usd = automatService.GetIngredientsUsing(selectedAutomat);
+                        //Milk = usd.Milk;
+                        //Water = usd.Water;
+                        //Coffee = usd.Coffee;
                     }));
 
             }

@@ -11,5 +11,6 @@ namespace Coffee
         public int Id { get; set; }
         public int DrinkId { get; set; }
         public int IngredientId { get; set; }
+        public int CountForCurrent { get; set; }
     }
 }

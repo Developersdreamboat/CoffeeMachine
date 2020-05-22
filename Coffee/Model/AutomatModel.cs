@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 namespace Coffee
 {
     public class AutomatModel
-    {;
+    {
         public int Id { get; set; }
+        public AutomatModel(int id) 
+        {
+            Id = id;
+        }
+        public AutomatModel() { }
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coffee 
-{ 
-    public interface IIngredientRepository:IRepository<IngredientEntity>
+namespace Coffee
+{
+    public interface IDrinkIngredientService
     {
+        IEnumerable<DrinkIngredientModel> GetDrinkIngredients();
     }
 }

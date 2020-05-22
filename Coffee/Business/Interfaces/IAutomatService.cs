@@ -8,8 +8,8 @@ namespace Coffee
 {
     public interface IAutomatService
     {
-        IngredientModel GetIngredientsUsing(AutomatModel automat);
-        int CountRefillPeriod(AutomatModel automat);
+        int GetIngredientsUsing(int ingredientId, int automatId);
+        int CountRefillPeriod(int automatId, int ingredientId, DateTime first, DateTime second);
         IEnumerable<AutomatModel> GetAutomats();
     }
 }
