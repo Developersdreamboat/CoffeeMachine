@@ -12,25 +12,32 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
-                        <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                        <TextBlock FontSize="18" Text="{Binding Path=Id}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="312,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=AutomatViewModel.Milk, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="483,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.834,-0.903" Text="{Binding Path=AutomatViewModel.Water, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="652,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=AutomatViewModel.Coffee, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button Content="Розрахувати"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,135,0,0" 
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="306,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=AutomatViewModel.Milk, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="474,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.834,-0.903" Text="{Binding Path=AutomatViewModel.Water, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="664,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=AutomatViewModel.Coffee, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Розрахувати"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="495,246,0,0" 
                 Command="{Binding AutomatViewModel.CalculateIngredients}" CommandParameter="{Binding AutomatViewModel.SelectedAutomat}"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="474,225,0,0" TextWrapping="Wrap"  Text="{Binding Path=AutomatViewModel.RefillPeriod, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Розрахувати" HorizontalAlignment="Left" Margin="495,276,0,0" VerticalAlignment="Top" Width="75" Command="{Binding AutomatViewModel.CalculateRefillPeriod}" CommandParameter="{Binding AutomatViewModel.SelectedAutomat}"/>
-        <Label Content="Молоко" HorizontalAlignment="Left" Margin="341,82,0,0" VerticalAlignment="Top"/>
-        <Label Content="Вода" HorizontalAlignment="Left" Margin="521,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.054,-0.445"/>
-        <Label Content="Кави" HorizontalAlignment="Left" Margin="700,82,0,0" VerticalAlignment="Top"/>
-        <Label Content="Використано інгредієнтів за минулу добу" HorizontalAlignment="Left" Margin="419,10,0,0" VerticalAlignment="Top" Width="305"/>
-        <Label Content="Заповнювати через" HorizontalAlignment="Left" Margin="341,222,0,0" VerticalAlignment="Top"/>
-        <Label Content="днів" HorizontalAlignment="Left" Margin="621,225,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="474,297,0,0" TextWrapping="Wrap"  Text="{Binding Path=AutomatViewModel.RefillPeriod, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Розрахувати" HorizontalAlignment="Left" Margin="495,344,0,0" VerticalAlignment="Top" Width="75" Command="{Binding AutomatViewModel.CalculateRefillPeriod}" CommandParameter="{Binding AutomatViewModel.SelectedAutomat}"/>
+        <Label Content="Молоко" HorizontalAlignment="Left" Margin="331,204,0,0" VerticalAlignment="Top"/>
+        <Label Content="Вода" HorizontalAlignment="Left" Margin="515,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.054,-0.445"/>
+        <Label Content="Кави" HorizontalAlignment="Left" Margin="701,204,0,0" VerticalAlignment="Top"/>
+        <Label Content="Використано інгредієнтів за минулу добу" HorizontalAlignment="Left" Margin="409,128,0,0" VerticalAlignment="Top" Width="305"/>
+        <Label Content="Заповнювати через" HorizontalAlignment="Left" Margin="341,297,0,0" VerticalAlignment="Top"/>
+        <Label Content="годин" HorizontalAlignment="Left" Margin="627,297,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.8,3.234"/>
+        <ComboBox HorizontalAlignment="Left" Margin="184,300,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Tag="1">Молоко</ComboBoxItem>
+            <ComboBoxItem Tag="2">Вода</ComboBoxItem>
+            <ComboBoxItem Tag="3">Кава</ComboBoxItem>
+        </ComboBox>
+        <DatePicker HorizontalAlignment="Left" Margin="331,61,0,0" VerticalAlignment="Top" SelectedDate="{Binding AutomatViewModel.SelectedFirstDate}"/>
+        <DatePicker HorizontalAlignment="Left" Margin="601,61,0,0" VerticalAlignment="Top" SelectedDate="{Binding AutomatViewModel.SelectedSecondDate}"/>
 
     </Grid>
 </Window>

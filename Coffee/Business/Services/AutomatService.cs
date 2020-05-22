@@ -37,7 +37,7 @@ namespace Coffee
                 Where(o => o.AutomatId == automatId && o.OrderTime > first && o.OrderTime < second);
             foreach (AutomatOrderModel o in orders) 
             {
-                composition = drinkIngredientService.GetDrinkIngredients().Where(c => c.DrinkId == o.DrinkId);
+                composition = drinkIngredientService.GetDrinkIngredients().Where(c => c.DrinkId == o.DrinkId && c.IngredientId==ingredientId);
                 foreach (DrinkIngredientModel c in composition) 
                 {
                     usedChoosenIngredient = usedChoosenIngredient + c.CountForCurrent;

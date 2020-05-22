@@ -18,6 +18,27 @@ namespace Coffee
         private int milk;
         private int water;
         private int coffee;
+        private DateTime firstDate;
+        private DateTime secondDate;
+        private int choosenIngredient;
+        public DateTime SelectedFirstDate
+        {
+            get { return firstDate; }
+            set
+            {
+                firstDate = value;
+                OnPropertyChanged("SelectedFirstDate");
+            }
+        }
+        public DateTime SelectedSecondDate
+        {
+            get { return secondDate; }
+            set
+            {
+                secondDate = value;
+                OnPropertyChanged("SelectedSecondDate");
+            }
+        }
         public string RefillPeriod 
         {
             get { return refillPeriod; }
@@ -68,10 +89,9 @@ namespace Coffee
                 return calculateIngredients ??
                     (calculateIngredients = new RelayCommand(obj =>
                     {
-                        //IngredientModel usd = automatService.GetIngredientsUsing(selectedAutomat);
-                        //Milk = usd.Milk;
-                        //Water = usd.Water;
-                        //Coffee = usd.Coffee;
+                        Milk = automatService.GetIngredientsUsing(1,selectedAutomat.Id,firstDate,secondDate);
+                        Water = automatService.GetIngredientsUsing(2, selectedAutomat.Id,firstDate,secondDate);
+                        Coffee = automatService.GetIngredientsUsing(3, selectedAutomat.Id,firstDate,secondDate);
                     }));
 
             }
@@ -84,12 +104,21 @@ namespace Coffee
                 return calculateRefillPeriod ??
                     (calculateRefillPeriod = new RelayCommand(obj =>
                     {
-                        int days = automatService.CountRefillPeriod(selectedAutomat);
+                        int days = automatService.CountRefillPeriod(selectedAutomat.Id,ChoosenIngredient,SelectedFirstDate,SelectedSecondDate);
                         RefillPeriod = days.ToString();
                     }));
 
             }
 
+        }
+        public int ChoosenIngredient 
+        {
+            get { return choosenIngredient; }
+            set 
+            {
+                choosenIngredient = value;
+                OnPropertyChanged("ChoosenIngredient");
+            }
         }
         public AutomatModel SelectedAutomat
         {
