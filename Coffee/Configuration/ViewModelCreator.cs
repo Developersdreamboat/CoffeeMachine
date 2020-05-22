@@ -24,7 +24,7 @@ namespace Coffee
             });
             var mapper = mapperConfig.CreateMapper();
             IUnitOfWork unitOfWork = new UnitOfWork(coffeeContext);
-            AutomatService automatService = new AutomatService(unitOfWork, mapper);
+            AutomatService automatService = new AutomatService(unitOfWork, mapper, new OrderService(unitOfWork, mapper));
 
             return new MainWindowViewModel(automatService);
         }

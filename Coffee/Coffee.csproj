@@ -182,7 +182,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Business\Interfaces\IAutomatService.cs" />
+    <Compile Include="Business\Interfaces\IOrderService.cs" />
     <Compile Include="Business\MapperConfigurationClass.cs" />
+    <Compile Include="Business\Services\OrderService.cs" />
     <Compile Include="Configuration\Interfaces\ICreator.cs" />
     <Compile Include="Configuration\ViewModelCreator.cs" />
     <Compile Include="Data\Entities\AutomatEntity.cs" />

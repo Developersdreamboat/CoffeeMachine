@@ -16,6 +16,12 @@ namespace Coffee
                 .ReverseMap();
             CreateMap<AutomatModel, AutomatEntity>()
 .ReverseMap();
+            CreateMap<AutomatIngredientModel, AutomatIngredientEntity>()
+.ReverseMap();
+            CreateMap<AutomatOrderModel, AutomatOrderEntity>()
+.ReverseMap(); 
+            CreateMap<DrinkIngredientModel, DrinkIngredientEntity>()
+ .ReverseMap();
             //CreateMap<Dictionary<DateTime, DrinkEntity>, Dictionary<DateTime, DrinkModel>>();
             //CreateMap<AutomatEntity, AutomatModel>().ForMember(dest=>dest.history,opt=>opt.MapFrom(src=>src.history))
             //.ForMember(dest=>dest.MaxIngredients,opt=>opt.MapFrom(src=>src.MaxIngredients)).ReverseMap();

@@ -10,25 +10,21 @@ namespace Coffee
     {
         private readonly IUnitOfWork unit;
         private readonly IMapper mapper;
-        public AutomatService(IUnitOfWork unit, IMapper mapper)
+        private readonly IOrderService orderService;
+        public AutomatService(IUnitOfWork unit, IMapper mapper, IOrderService orderService)
         {
             this.unit= unit;
             this.mapper = mapper;
+            this.orderService = orderService;
         }
         public IEnumerable<AutomatModel> GetAutomats()
         {
             return mapper.Map<IEnumerable<AutomatModel>>(unit.AutomatRepository.GetAll());
         }
-        public IngredientModel GetIngredientsUsing(AutomatModel automat)
+        public IngredientModel GetIngredientsUsing(int automatId)
         {
-            DrinkModel Capuccino = new DrinkModel(1, new IngredientModel(1, 2, 3));
-            DrinkModel Latte = new DrinkModel(2, new IngredientModel(3, 3, 3));
-            DrinkModel Mocha = new DrinkModel(3, new IngredientModel(3,4,5));
-            var usedIngs = new IngredientModel();
-            
-            usedIngs = Capuccino.Composition.Multiply(automat.UsedCapuccino)
-                     + Latte.Composition.Multiply(automat.UsedLatte)
-                     + Mocha.Composition.Multiply(automat.UsedMocha);
+
+            usedIngs = ;
             return usedIngs;
         }
 
